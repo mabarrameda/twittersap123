@@ -27,12 +27,34 @@ class MainHandler(webapp2.RequestHandler):
         template_values = {
             'logout_url': url,
             'url_linktext': url_linktext,
-            'user_email': 'romanangelo.tria@gmail.com'
+            'user_email': 'marvinanthonysantos@gmail.com'
         }
 
         template = jinja_environment.get_template('templates/index.html')
         self.response.out.write(template.render(template_values))
 
-app = webapp.WSGIApplication([('/', MainHandler)],
-                             debug=True)
+class AboutUsHandler(webapp2.RequestHandler):
+    def get(self):
+
+        if users.get_current_user():
+            url = users.create_logout_url(self.request.uri)
+            url_linktext = 'Logout'
+        else:
+            url = users.create_login_url(self.request.uri)
+            url_linktext = 'Login'
+
+        template_values = {
+            'logout_url': url,
+            'url_linktext': url_linktext,
+            'user_email': 'marvinanthonysantos@gmail.com'
+        }
+
+        template = jinja_environment.get_template('templates/staffs.html')
+        self.response.out.write(template.render(template_values))
+
+app = webapp.WSGIApplication([
+	('/', MainHandler),
+	('/staffs', AboutUsHandler),
+	],
+       debug=True)
 

@@ -33,7 +33,7 @@
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=294909157279774";
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=281228818662760";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	
@@ -83,7 +83,7 @@
 		<div class="navbar bottom-inverse navbar-fixed-bottom">
       			<div class="bottombar-inner">
         			<div class="container">
-		  			Copyright 2012 FB & Twitter Feeder App by <a href="/staffs">butawzboysTEAM</a>. All Rights Reserved.
+		  			Copyright 2012 FB & Twitter Feeder App by <a href="/staffs">twitterhappyanonDEVTEAM</a>. All Rights Reserved.
        	 			</div>
       			</div>
 		</div><!--footer END -->
