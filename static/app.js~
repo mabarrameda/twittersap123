@@ -41,16 +41,16 @@ $(function(){
 		views: {}
 	};
 
-	// Search Module facebook and twitter
+	// Search Module
 	//------------------
 	app.models.SearchModel = Backbone.Model.extend({
 		initialize: function() {
 			var type = '';
-			if (this.get('isFB') == true) {
-				type = type + ' @fb ';
+			if (this.get('isFB') === true) {
+				type = type + ' f ';
 			}
-			if (this.get('isTwitter') == true) {
-				type = type + ' @twitter ';
+			if (this.get('isTwitter') === true) {
+				type = type + ' t ';
 			}
 			this.set('type', type);
 		}
@@ -135,7 +135,7 @@ $(function(){
 
         },
         url: function() {
-			return 'http://search.twitter.com/search.json?q=' + this.query +  '&rpp=8' + '&callback=?';
+			return 'http://search.twitter.com/search.json?q=' + this.query +  '&rpp=1000' + '&callback=?';
         },
         query: '', //default query
         page: '1',
@@ -176,7 +176,7 @@ $(function(){
 
         },
         url: function() {
-			return 'http://search.twitter.com/search.json?q=' + this.query +  '&rpp=8' + '&callback=?';
+			return 'http://search.twitter.com/search.json?q=' + this.query +  '&rpp=1000' + '&callback=?';
         },
         query: '', //default query
         page: '1',

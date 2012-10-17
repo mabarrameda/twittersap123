@@ -1,6 +1,4 @@
-@import url('css/style.css');
-
-container.main {
+.container.main {
 	position: relative;
 	top: 70px;
 	height: 500px;
@@ -11,6 +9,11 @@ container.main {
 	overflow-y: auto;
 }
 
+#FBbtn,#Tbtn
+{
+	margin-bottom:5px;
+	margin-left:12px;
+}
 #results { padding:35px 0; padding-bottom:250px; }
 	#results DIV.title { font-weight:bold; font-size:15px; }
 	#results UL#tweets { position:relative; margin-left:-5px; }

@@ -27,7 +27,7 @@ class MainHandler(webapp2.RequestHandler):
         template_values = {
             'logout_url': url,
             'url_linktext': url_linktext,
-            'user_email': 'marvinanthonysantos@gmail.com'
+            'user_email': 'barrameda.markadrian@gmail.com'
         }
 
         template = jinja_environment.get_template('templates/index.html')
@@ -46,15 +46,15 @@ class AboutUsHandler(webapp2.RequestHandler):
         template_values = {
             'logout_url': url,
             'url_linktext': url_linktext,
-            'user_email': 'marvinanthonysantos@gmail.com'
+            'user_email': 'barrameda.markadrian@gmail.com'
         }
 
-        template = jinja_environment.get_template('templates/staffs.html')
+        template = jinja_environment.get_template('templates/team.html')
         self.response.out.write(template.render(template_values))
 
 app = webapp.WSGIApplication([
 	('/', MainHandler),
-	('/staffs', AboutUsHandler),
+	('/team', AboutUsHandler),
 	],
        debug=True)
 
