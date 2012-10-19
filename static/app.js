@@ -47,10 +47,10 @@ $(function(){
 		initialize: function() {
 			var type = '';
 			if (this.get('isFB') == true) {
-				type = type + ' fbpost';
+				type = type + ' @FBpost ';
 			}
 			if (this.get('isTwitter') == true) {
-				type = type + ' tweet ';
+				type = type + ' @tweet ';
 			}
 			this.set('type', type);
 		}
